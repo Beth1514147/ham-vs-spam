@@ -13,7 +13,7 @@ from sklearn import metrics
 import seaborn as sns
 
 # 1. Read data
-data = pd.read_csv("demo_ham_spam_HV/spam.csv", encoding='latin-1')
+data = pd.read_csv("spam.csv", encoding='latin-1')
 
 #--------------
 # GUI
@@ -23,7 +23,7 @@ st.write("## Ham vs Spam")
 uploaded_file = st.file_uploader("Choose a file", type=['csv'])
 if uploaded_file is not None:
     data = pd.read_csv(uploaded_file, encoding='latin-1')
-    data.to_csv("demo_ham_spam_HV/spam_new.csv", index = False)
+    data.to_csv("spam_new.csv", index = False)
 
 
 # 2. Data pre-processing
@@ -91,8 +91,8 @@ if choice == 'Business Objective':
     ###### Classifying spam and ham messages is one of the most common natural language processing tasks for emails and chat engines. With the advancements in machine learning and natural language processing techniques, it is now possible to separate spam messages from ham messages with a high degree of accuracy.
     """)  
     st.write("""###### => Problem/ Requirement: Use Machine Learning algorithms in Python for ham and spam message classification.""")
-    st.image("demo_ham_spam_HV/ham_spam.jpg")
-    
+    st.image("ham_spam.jpg")
+
 
 elif choice == 'Build Project':
     st.subheader("Build Project")
